@@ -14,14 +14,31 @@ body{
     margin: 0;
     display: flex;
 }
-#title-nav a{
-    color: white;
+#title-nav a {
     text-decoration: none;
-    padding: 20px;
+    color: white;
+    position: relative;
+    display: inline-block;
+    padding-left: 20px;
+    padding-right: 20px;
 }
-#title-nav a:hover{
-    background-color:#00bfff;
+
+#title-nav li a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.7);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
 }
+
+#title-nav li a:hover::after {
+  width: 80%;
+}
+
 .profiletitle h1{
     background-color:#0000ff ;
     color: white;
@@ -101,8 +118,7 @@ body{
     text-align: center;
 }
 .footer{
-   text-align: center;
-   padding: 30px;
+    float: right;
 }
 #sidediv{
     background-color: #4169e1;
@@ -141,8 +157,8 @@ body{
   left: 50%;
   bottom: 0;
   width: 0;
-  height: 4px;
-  background-color: #007BFF;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.7);
   transition: all 0.3s ease;
   transform: translateX(-50%);
 }
@@ -205,59 +221,82 @@ body{
     box-sizing: border-box;
     padding: 20px;
 }
-.sightseeingtitle h1{
-    background-color: rgba(186, 186, 194, 0.5);
-    color: green;
+.sightseeing-item{
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 5px;
+    border: 1px solid whitesmoke;
+    margin-bottom: 20px;
+    box-shadow: 3px 3px 3px 3px gray;
+}
+.frame-item{
+    background-color: grey;
+    width: 60%;
+    border: 5px solid gray;
+    border-radius: 5px;
+    padding: 20px;
+    margin-left: 30%;
+    margin-right: 15%;
+}
+.frame-header{
+    background-color:rgba(255, 255, 255, 0.7) ;
+    display: flex;
+    padding: 10px;
+}
+.frame-header img{
+    background-color: #0000ff;
+    border-radius: 120px;
+    width: 20%;
+    height: 30%;
+    margin-right: 30px;
+}
+.homegamen img{
+    margin-top: 30px;
+    width: 70%;
+    height: 50%;
+    padding-left: 15%;
+}
+.homeicon{
+    display: flex;
+    justify-content: space-between;
+}
+.homeicon1{
+    width: 30%;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.homeicon1 img{
+    width: 40%;
+}
+.homeicon2{
+    width: 30%;
+    margin-left: 30%;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.homeicon2 img{
     width: 40%;
     margin-left: 30%;
-    padding: 10px;
-    text-align: center;
-    box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 10px;
 }
-.sightseeing-item{
-    background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 5px;
-    border: 2px solid black;
-    margin-bottom: 20px;
+hr{
+    border-top:4px solid
 }
-.sightseeing-item img{
+.footericon{
+    display: flex;
+    justify-content: space-around;
     width: 20%;
+    padding-top: 20px;
+    padding-right: 70%
 }
-#maindiv3{
-    width: 80%;
-    box-sizing: border-box;
-    padding: 10px;
-}
-.gamen1 img{
+.footericon img{
     width: 50%;
-    margin-left: 15%;
-    padding-left: 50%;
-    padding-right: 50%;
-    border-radius: 10px;
+    padding-right: 100%;
 }
-.footer-icons {
-    background-color: black;
-    width: 70%;
-    margin-left: 15%;
-    padding-left: 10%;
+.footer2{
     position: fixed;
-    bottom: 2px;
-    display: flex;
-    justify-content: space-between;
-}
-.footer-icons2 {
-    background-color: black;
-    width: 70%;
-    margin-left: 15%;
-    padding-left: 10%;
-    position: fixed;
-    bottom: 30px;
-    display: flex;
-    justify-content: space-between;
-}
-.footer-icons img {
-    height: 50px;
-}
-.footer-icons2 {
-    height: 50px;
+    bottom: 2px; right: 20px;
+    margin-top: 20px;
 }
